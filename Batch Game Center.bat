@@ -1,41 +1,11 @@
 @echo off
-title BSE
-echo.
-echo Welcome to the Batch Search Engine 2.0
-echo.
-echo --------------------------------------------------
-:search
-color 70
-echo.
-echo Where do you want to go?
-echo.
-set /p sch=
-if %sch%==google.com start www.google.com
-if %sch%==youtube.com goto ytop
-if %sch%==nearpod.com start www.nearpod.com/student
-if %sch%==ebay.com start www.ebay.com
-if %sch%==exit exit
-if %sch%==coolbatchgames.com goto gamesmenu
-if %sch%==cooltools.com goto cooltool
-if %sch%==makearandomnumber echo %random%
-pause
-cls
-goto search
-:ytop
-echo launching youtube...
-timeout 5
-start https://www.youtube.com/watch?v=oHg5SJYRHA0
-pause
-echo haha if you are still reading this, sorry, I'll actually launch youtube
-pause
-start www.youtube.com
 :gamesmenu
-color 70
+color 5e
 cls
 echo __________________________________________________
 echo.
 echo.
-echo Welcome To coolbatchgames.com!
+echo Welcome To the Batch Game Center 2.4!
 echo.
 echo __________________________________________________
 echo.
@@ -82,11 +52,10 @@ pause
 cls
 :select
 cls
-echo press [B] to go back to the search engine.
-echo press [A] to go back to the easter egg menu.
+echo press [A] to go back to the game menu.
 set /p bgo=
-if %bgo%==b goto search
-if %bgo%==g goto gamesmenu
+if %b%==b goto search
+if %b%==g goto gamesmenu
 :gamelist
 cls
 echo                                [#][name           ][description          ][launch command ]
@@ -120,58 +89,8 @@ echo.
 echo.
 pause
 goto gamesmenu
-:cooltool
-cls
-echo __________________________________________________
-echo.
-echo.
-echo Welcome To cooltools.com!
-echo.
-echo __________________________________________________
-echo.
-echo.
-echo what tool do you wish to use? type "tools" for a list of commands used to launch tools.
-echo.
-echo __________________________________________________
-echo.
-set /p optool=
-if %optool%==calculator goto calc
-if %optool%==tools goto toolist
-:toolist
-cls
-echo                                [#][name         ][description          ][launch command]
-echo                                [1][calculator   ][it's a... calculator.][calculator    ]
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-pause
-goto cooltool
 :dealornodeal
-@echo off
+cls
 echo Loading...
 setlocal enabledelayedexpansion
 set dealdone=0
